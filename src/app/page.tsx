@@ -95,7 +95,7 @@ const articleData = [
 ];
 
 const newestArticle = articleData.sort(
-  (a, b) => b.PublicationDate - a.PublicationDate
+  (a: any, b: any) => b.PublicationDate - a.PublicationDate
 );
 
 export default function Home() {
