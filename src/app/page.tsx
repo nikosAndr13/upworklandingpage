@@ -21,7 +21,17 @@ import { Fragment } from "react";
 import Link from "next/link";
 import NewsLetters from "./components/NewsLetter";
 
-const articleData = [
+type Article = {
+  title: string;
+  imagePreview: any; // You can refine this to `StaticImageData` if using `next/image`
+  TextPreview: string;
+  publisherImage: any;
+  PublisherName: string;
+  PublicationDate: Date;
+  ReadTime: number;
+};
+
+const articleData: Article[] = [
   {
     title: "Why Becoming a Tech Entrepreneur Is The Next Step of Your Career",
     imagePreview: photo1,
@@ -94,8 +104,8 @@ const articleData = [
   },
 ];
 
-const newestArticle = articleData.sort(
-  (a: any, b: any) => b.PublicationDate - a.PublicationDate
+const newestArticle = [...articleData].sort(
+  (a, b) => b.PublicationDate.getTime() - a.PublicationDate.getTime()
 );
 
 export default function Home() {
