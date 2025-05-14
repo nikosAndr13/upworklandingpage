@@ -8,6 +8,14 @@ export default function ArticlePreview({
   PublisherName,
   PublicationDate,
   ReadTime,
+}: {
+  title: string;
+  image: string;
+  previewText: string;
+  publisherImage: string;
+  PublicationDate: Date;
+  PublisherName: string;
+  ReadTime: number;
 }) {
   const day = PublicationDate.toString()
     .slice(4, 7)
