@@ -25,7 +25,7 @@ type Article = {
   title: string;
   imagePreview: string; // You can refine this to `StaticImageData` if using `next/image`
   TextPreview: string;
-  publisherImage: any;
+  publisherImage: string;
   PublisherName: string;
   PublicationDate: Date;
   ReadTime: number;
