@@ -23,7 +23,7 @@ import NewsLetters from "./components/NewsLetter";
 
 type Article = {
   title: string;
-  imagePreview: any; // You can refine this to `StaticImageData` if using `next/image`
+  imagePreview: string; // You can refine this to `StaticImageData` if using `next/image`
   TextPreview: string;
   publisherImage: any;
   PublisherName: string;
