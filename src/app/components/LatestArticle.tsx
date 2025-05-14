@@ -1,6 +1,16 @@
 import Image from "next/image";
 
-export default function LatestArticle({ article }) {
+type article = {
+  title: string;
+  imagePreview: string;
+  publisherImage: string;
+  TextPreview: string;
+  PublisherName: string;
+  ReadTime: number;
+  PublicationDate: Date;
+};
+
+export default function LatestArticle({ article }: { article: article }) {
   const {
     title,
     imagePreview,

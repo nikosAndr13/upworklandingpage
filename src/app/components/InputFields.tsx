@@ -1,4 +1,4 @@
-export default function InputFields({ name }) {
+export default function InputFields({ name }: { name: string }) {
   return (
     <>
       <div className="pt-5">
